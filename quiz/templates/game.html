@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <div>
+        {% csrf_token %}
+        <input type="hidden" id="save-url" value="{% url 'save_answer' %}">
+        <table class="table table-info table-bordered">
+            {% for topic in topics %}
+                <tr>
+                    <td class="image">
+                        <img src="{{ topic.photo.url }}" width="150" height="120" alt="topic_image" class="image">
+                        <h2>{{ topic.title }}</h2>
+                    </td>
+                    {% for question in topic.question_set.all %}
+                        <td id="{{ question.pk }}" class="assessment">
+                            <input type="hidden" name="status" value="{{ question.is_answered }}">
+                            <input type="hidden" name="value" value="{{ question.value }}">
+                            <input type="hidden" name="text" value="{{ question.text }}">
+                            <input type="hidden" name="answer" value="{{ question.answer }}">
+                            {{ question.value }}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock content %}
+

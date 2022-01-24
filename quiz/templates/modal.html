@@ -1,0 +1,21 @@
+{% block modal %}
+    <div>
+        <div class="modal" id="question_modal" tabindex="-1">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="modalValue">Modal title</h1>
+                    </div>
+                    <div class="modal-body">
+                        <h1 id="modalText"></h1>
+                        <input type="hidden" id="questionPk">
+                        <p id="modalAnswer" class="d-none">Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer justify-content-md-center">
+                        <button type="button" id="modal-show-answer" class="btn btn-primary">Пакажы верны адказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock modal %}
