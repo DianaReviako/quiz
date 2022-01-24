@@ -1,0 +1,20 @@
+.table {
+	position: absolute;
+}
+
+.image {
+    position: relative;
+    }
+
+h2 {
+	position: absolute;
+	color: #fff;
+	font-size: 15px;
+	line-height: 0px;
+	bottom: 10px;
+}
+
+.assessment {
+	font-size: 35px;
+	line-height: 120px;
+}
