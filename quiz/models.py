@@ -6,7 +6,7 @@ class Topic(models.Model):
     photo = models.ImageField(upload_to='topic_image/')
 
     def __str__(self):
-        return self.topic_title
+        return self.title
 
 
 class Question(models.Model):
