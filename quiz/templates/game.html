@@ -7,7 +7,7 @@
             {% for topic in topics %}
                 <tr>
                     <td class="image">
-                        <img src="{{ topic.photo.url }}" width="150" height="120" alt="topic_image" class="image">
+                        <img src="{{ topic.photo.url }}" width="150" height="123" alt="topic_image" class="image">
                         <h2>{{ topic.title }}</h2>
                     </td>
                     {% for question in topic.question_set.all %}

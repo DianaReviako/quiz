@@ -28,3 +28,4 @@ def start_game(request):
         question.is_answered = False
         question.save()
     return redirect('quiz')
+    
